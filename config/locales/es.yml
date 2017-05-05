@@ -1,0 +1,20 @@
+es:
+  title: "Repositorio de Proyecto - HabPro"
+  signup: "Registrarse"
+  login: "Ingresar"
+  logout: "Cerrar Sesión"
+  help: "Ayuda"
+  back: "Atrás"
+  show: "Ver"
+  edit: "Modificar"
+  destroy: "Eliminar"
+  exit: "Salir"
+  models:
+    specialty:
+      grade_level_options:
+        grade: Grado
+        postgraduate: Posgrado
+        technicature: Tecnicatura
+  errors:
+    messages:
+      blank: "No puede estar en blanco"

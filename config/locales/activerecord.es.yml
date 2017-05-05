@@ -1,0 +1,82 @@
+es:
+  activerecord:
+    models:
+      user:
+        one: Usuario
+        other: Usuarios
+      admin_user:
+        one: Usuario Admin
+        other: Usuarios Admin
+      project:
+        one: Proyecto
+        other: Proyectos
+      specialty:
+        one: Carrera
+        other: Carreras
+    attributes:
+      user:
+        email: Correo Electrónico
+        password: Contraseña
+        password_confirmation: Confirmar Contraseña
+        password_singup: "Ingrese Contraseña (%{length} caracteres minimos)"
+        created_at: Fecha Creación
+        updated_at: Fecha Modificación
+        last_sign_in_at: Ultima Conexión
+        encrypted_password: Contraseña cifrada
+        reset_password_token: Restablecer Contraseña
+        reset_password_sent_at: Restablecer Contraseña Enviada a
+        remember_created_at: Recuerde, Creado en
+        current_sign_in_ip: Conexión Actual
+        last_sign_in_ip: Ultimo Acceso
+        sign_in_count: Cuenta de Inicio de Sesión
+        current_sign_in_at: Inicio de Sesión Actual
+        role: Rol
+      admin_user:
+        email: Correo Electrónico
+        current_sign_in_at: Inicio de Sesión actual
+        sign_in_count: Cuenta de Inicio de Sesión
+        created_at: Fecha Creación
+        encrypted_password: Contraseña cifrada
+        reset_password_token: Restablecer Contraseña
+        reset_password_sent_at: Restablecer Contraseña Enviada a
+        remember_created_at: Recuerde, Creado en
+        last_sign_in_at: Ultimo Inicio de Sesión
+        current_sign_in_ip: Conexión Actual
+        last_sign_in_ip: Ultimo Acceso
+        updated_at: Fecha Modificación
+      project:
+        name: Título
+        description: Descripción
+        created_at: Fecha Creación
+        updated_at: Fecha Modificación
+      specialty:
+        name: Nombre
+        created_at: Fecha Creación
+        updated_at: Fecha Modificación
+        grade_level: Tipo de Carrera
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              blank: No puede estar en blanco
+            password_confirmation:
+              blank: No puede estar en blanco
+              confirmation: No coincide con la contraseña
+        admin_user:
+          attributes:
+            password:
+              blank: No puede estar en blanco
+            password_confirmation:
+              blank: No puede estar en blanco
+              confirmation: No coincide con la contraseña
+        project:
+          attributes:
+            name:
+              blank: No puede estar en blanco
+        specialty:
+          attributes:
+            name:
+              blank: Debe ingresar un nombre
+            grade_level:
+              blank: Debe seleccionar un tipo de carrera

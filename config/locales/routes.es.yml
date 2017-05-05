@@ -1,0 +1,14 @@
+es:
+  routes:
+    # actions
+    edit: editar
+    new: nuevo
+    show: mostrar
+    sign_in: ingresar
+    login: ingresar
+    sign_up: registrarse
+    # routes
+    admin: admins
+    users: usuarios
+    projects: proyectos
+    specialties: carreras
