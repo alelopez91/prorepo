@@ -8,13 +8,8 @@ es:
   show: "Ver"
   edit: "Modificar"
   destroy: "Eliminar"
+  details: "Detalles"
   exit: "Salir"
-  models:
-    specialty:
-      grade_level_options:
-        grade: Grado
-        postgraduate: Posgrado
-        technicature: Tecnicatura
   errors:
     messages:
       blank: "No puede estar en blanco"
