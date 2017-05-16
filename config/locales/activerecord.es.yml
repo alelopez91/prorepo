@@ -13,6 +13,9 @@ es:
       specialty:
         one: Carrera
         other: Carreras
+      subject:
+        one: Materia
+        other: Materias
     attributes:
       user:
         email: Correo Electrónico
@@ -53,7 +56,25 @@ es:
         name: Nombre
         created_at: Fecha Creación
         updated_at: Fecha Modificación
-        grade_level: Tipo de Carrera
+        grade_level: Tipo
+        grade_levels:
+          grade: Grado
+          postgrade: Posgrado
+          technicature: Tecnicatura
+          event: Evento
+      subject:
+        name: Nombre
+        created_at: Fecha Creación
+        updated_at: Fecha Modificación
+        specialty: Carrera
+        department: Departamento
+        departments:
+          systems: Sistemas
+          electronics: Electrónica
+          electric: Eléctrica
+          civil: Civil
+          mechanics: Mecánica
+          basic_sciences: Ciencias Básicas
     errors:
       models:
         user:
@@ -80,3 +101,9 @@ es:
               blank: Debe ingresar un nombre
             grade_level:
               blank: Debe seleccionar un tipo de carrera
+        subject:
+          attributes:
+            name:
+              blank: Debe ingresar un nombre
+            specialty:
+              blank: Debe seleccionar una carrera
