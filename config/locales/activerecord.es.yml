@@ -48,10 +48,17 @@ es:
         last_sign_in_ip: Ultimo Acceso
         updated_at: Fecha Modificación
       project:
-        name: Título
-        description: Descripción
+        title: Título
+        abstract: Descripción
+        authors: Autores
+        date: Fecha de Realización
+        subject: Materia
         created_at: Fecha Creación
         updated_at: Fecha Modificación
+        revision_state: Estado de Revisión
+        revision_states:
+          pending: Pendiente
+          approved: Aprobado
       specialty:
         name: Nombre
         created_at: Fecha Creación
@@ -93,8 +100,12 @@ es:
               confirmation: No coincide con la contraseña
         project:
           attributes:
-            name:
-              blank: No puede estar en blanco
+            title:
+              blank: Debe ingresar un título
+            abstract:
+              blank: Debe ingresar una descripción
+            subject:
+              blank: Debe ingregar una materia o evento
         specialty:
           attributes:
             name:

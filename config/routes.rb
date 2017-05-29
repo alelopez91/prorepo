@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   root 'welcome#index'
+
+  resources :projects
 end
