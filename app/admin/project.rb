@@ -31,6 +31,7 @@ ActiveAdmin.register Project do
       row :authors
       row :date
       row :subject
+      row :specialty
       row :revision_state do
         enum_l(project, :revision_state)
       end

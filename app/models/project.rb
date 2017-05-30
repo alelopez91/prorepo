@@ -6,4 +6,8 @@ class Project < ApplicationRecord
 
   validates :title, :abstract, :subject, presence: true
   validates :authors, length: { minimum: 1}
+
+  def specialty
+    subject.specialty
+  end
 end

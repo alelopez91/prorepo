@@ -1,33 +1,33 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong><%= t('activerecord.attributes.project.title') %>:</strong>
   <%= @project.title %>
 </p>
 
 <p>
-  <strong>Abstract:</strong>
+  <strong><%= t('activerecord.attributes.project.abstract') %>:</strong>
   <%= @project.abstract %>
 </p>
 
 <p>
-  <strong>Date:</strong>
+  <strong><%= t('activerecord.attributes.project.date') %>:</strong>
   <%= @project.date %>
 </p>
 
 <p>
-  <strong>Subject:</strong>
-  <%= @project.subject %>
+  <strong><%= t('activerecord.attributes.project.subject') %>:</strong>
+  <%= @project.subject.name %>
 </p>
 
 <p>
-  <strong>Authors:</strong>
+  <strong><%= t('activerecord.attributes.project.authors') %>:</strong>
   <%= @project.authors %>
 </p>
 
 <p>
-  <strong>Revision state:</strong>
-  <%= @project.revision_state %>
+  <strong><%= t('activerecord.attributes.project.revision_state') %>:</strong>
+  <%= enum_l(@project, :revision_state) %>
 </p>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |

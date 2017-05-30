@@ -53,6 +53,7 @@ es:
         authors: Autores
         date: Fecha de Realización
         subject: Materia
+        specialty: Carrera
         created_at: Fecha Creación
         updated_at: Fecha Modificación
         revision_state: Estado de Revisión
@@ -106,6 +107,8 @@ es:
               blank: Debe ingresar una descripción
             subject:
               blank: Debe ingregar una materia o evento
+            authors:
+              too_short: Debe ingresar al menos un autor
         specialty:
           attributes:
             name:

@@ -26,7 +26,7 @@
           <td><%= project.date %></td>
           <td><%= project.subject.name %></td>
           <td><%= project.authors %></td>
-          <td><%= project.revision_state %></td>
+          <td><%= enum_l(project, :revision_state) %></td>
           <td><%= link_to 'Show', project %></td>
           <td><%= link_to 'Edit', edit_project_path(project) %></td>
         </tr>
