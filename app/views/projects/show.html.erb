@@ -30,5 +30,12 @@
   <%= enum_l(@project, :revision_state) %>
 </p>
 
+<p>
+  <% if @project.attachment? %>
+    <strong><%= t('activerecord.attributes.project.attachment') %>:</strong>
+    <%= link_to @project.title, @project.attachment.url, target: '_blank' %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', root_path %>

@@ -1,5 +1,5 @@
 ActiveAdmin.register Project do
-  permit_params :title, :abstract, :authors, :date, :subject_id, :revision_state
+  permit_params :title, :abstract, :authors, :date, :subject_id, :revision_state, :attachment
 
   index do
     selectable_column
@@ -20,6 +20,7 @@ ActiveAdmin.register Project do
       f.input :abstract
       f.input :authors
       f.input :date, as: :datepicker, :html_option => { value: Date.today }
+      f.input :attachment
     end
     f.actions
   end

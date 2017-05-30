@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'route_translator'
 gem 'devise'
 gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin'
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 
 
 group :development, :test do
