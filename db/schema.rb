@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170504031834) do
+ActiveRecord::Schema.define(version: 20170529031817) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,11 +46,34 @@ ActiveRecord::Schema.define(version: 20170504031834) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  create_table "projects", force: :cascade do |t|
+    t.string   "title"
+    t.text     "abstract"
+    t.string   "authors"
+    t.string   "date"
+    t.integer  "subject_id"
+    t.integer  "revision_state", default: 0
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.index ["subject_id"], name: "index_projects_on_subject_id", using: :btree
+  end
+
   create_table "specialties", force: :cascade do |t|
     t.string   "name"
-    t.string   "grade_level"
+    t.integer  "grade_level"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
+  create_table "subjects", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "department"
+    t.integer  "specialty_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["specialty_id"], name: "index_subjects_on_specialty_id", using: :btree
+  end
+
+  add_foreign_key "projects", "subjects"
+  add_foreign_key "subjects", "specialties"
 end
