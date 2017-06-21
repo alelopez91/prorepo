@@ -3,7 +3,7 @@ class Project < ApplicationRecord
 
   serialize :authors
   enum revision_state: [ :pending, :approved ]
-  has_attached_file :attachment, preserve_files: true
+  has_attached_file :attachment, preserve_files: false
 
   validates_attachment_content_type :attachment, content_type: ['application/pdf']
   validates_attachment_file_name :attachment, :matches => [/pdf\Z/]

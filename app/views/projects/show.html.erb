@@ -32,8 +32,8 @@
 
 <p>
   <% if @project.attachment? %>
-    <strong><%= t('activerecord.attributes.project.attachment') %>:</strong>
-    <%= link_to @project.title, @project.attachment.url, target: '_blank' %>
+    <strong><%= t('activerecord.attributes.project.attachment') %>:</strong><br>
+    <iframe src=<%= @project.attachment.url %> width="1000" height="780" style="padding-left: 100px;"> </iframe>
   <% end %>
 </p>
 

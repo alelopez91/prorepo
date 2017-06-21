@@ -53,6 +53,7 @@ es:
         authors: Autores
         date: Fecha de Realización
         subject: Materia
+        subject_id: Materia
         specialty: Carrera
         attachment: Archivo PDF
         created_at: Fecha Creación

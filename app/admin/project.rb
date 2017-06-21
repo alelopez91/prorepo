@@ -20,24 +20,40 @@ ActiveAdmin.register Project do
       f.input :abstract
       f.input :authors
       f.input :date, as: :datepicker, :html_option => { value: Date.today }
-      f.input :attachment
+      f.input :attachment, hint: f.project.attachment? ? link_to(f.project.attachment_file_name, f.project.attachment.url) : content_tag(:span, "No hay PDF subido")
     end
     f.actions
   end
 
-  show do
-    attributes_table do
-      row :title
-      row :abstract
-      row :authors
-      row :date
-      row :subject
-      row :specialty
-      row :revision_state do
-        enum_l(project, :revision_state)
+  show do |recipe|
+    tabs do
+      tab "Detalles" do
+        attributes_table do
+          row :title
+          row :abstract
+          row :authors
+          row :date
+          row :subject
+          row :specialty
+          row :revision_state do
+            enum_l(project, :revision_state)
+          end
+          row :created_at
+          row :updated_at
+        end
       end
-      row :created_at
-      row :updated_at
+
+      tab "Archivo Adjunto" do
+        attributes_table do
+          row :attachment_file_name
+          row :attachment_content_type
+          row :attachment_file_size
+          row :attachment_updated_at
+          row :attachment do
+            link_to(project.attachment_file_name, project.attachment.url)
+          end
+        end
+      end
     end
   end
 end
