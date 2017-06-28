@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  resources :projects
+  resources :projects, except: [:index, :destroy, :edit, :update]
 end

@@ -1,44 +1,45 @@
-<h1><%= I18n.t('title')%></h1>
-<h1>Bienvenido</h1>
-<h2><%= link_to "Admin Login", new_admin_user_session_path %></h2>
-
-<p id="notice"><%= notice %></p>
-
-<% if @projects.any? %>
-  <h1>Projects</h1>
-
-  <table>
-    <thead>
-      <tr>
-        <th><%= t('activerecord.attributes.project.title') %></th>
-        <th><%= t('activerecord.attributes.project.date') %></th>
-        <th><%= t('activerecord.attributes.project.subject') %></th>
-        <th><%= t('activerecord.attributes.project.authors') %></th>
-        <th><%= t('activerecord.attributes.project.revision_state') %></th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @projects.each do |project| %>
-        <tr>
-          <td><%= project.title %></td>
-          <td><%= project.date %></td>
-          <td><%= project.subject.name %></td>
-          <td><%= project.authors %></td>
-          <td><%= enum_l(project, :revision_state) %></td>
-          <td><%= link_to 'Show', project %></td>
-          <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-  <br>
-
-  <%= link_to 'New Project', new_project_path %>
-<% else %>
-  <h1>No existen proyectos</h1>
-
-  <%= link_to 'New Project', new_project_path %>
-<% end -%>
+<div class="col-lg-12" style="min-height: 202px;">
+  <% if @projects.any? %>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="col-lg-6">
+          <h1><%= I18n.t('activerecord.models.project.other') %></h1>
+        </div>
+        <div class="col-lg-6">
+          <h1>
+            <%= link_to new_project_path, class: "btn btn-primary btn-sm pull-right", role: "button" do %>
+              <span class="pull-right">
+                ENVIANOS TU PROYECTO
+                <i class="fa fa-cloud-upload"></i>
+              </span>
+            <% end %>
+          </h1>
+        </div>
+      </div>
+  <!-- /.col-lg-12 -->
+    </div>
+  <!-- /.row -->
+    <div class="row">
+      <div class="col-lg-12">
+        <% @projects.each do |project| %>
+          <div class="col-lg-4">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h4><%= truncate_text(project.title, 40) %></h4>
+              </div>
+              <div class="panel-body">
+                <%= I18n.t('activerecord.attributes.project.subject') %>: <%= project.subject.name %>
+                <p><%= truncate_text(project.abstract, 200) %></p>
+              </div>
+              <div class="panel-footer">
+              <a href="<%= project_path(project) %>" class="btn btn-primary btn-sm" role="button"><i class="fa fa-info-circle"></i> VER INFO</a>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% else %>
+    <h1>No hay proyectos</h1>
+  <% end %>
+</div>
