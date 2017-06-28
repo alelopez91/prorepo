@@ -1,6 +1,14 @@
 ActiveAdmin.register Project do
   permit_params :title, :abstract, :authors, :date, :subject_id, :revision_state, :attachment
 
+  scope I18n.t('all'), :all, default: true
+  scope I18n.t('activerecord.attributes.project.revision_states.pending'),  :pending
+  scope I18n.t('activerecord.attributes.project.revision_states.approved'), :approved
+
+  filter :title_contains
+  filter :subject
+  filter :created_at
+
   index do
     selectable_column
     id_column
