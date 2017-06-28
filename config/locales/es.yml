@@ -8,6 +8,7 @@ es:
   show: "Ver"
   edit: "Modificar"
   all: "Todos"
+  reset_button: "Limpiar Campos"
   destroy: "Eliminar"
   details: "Detalles"
   exit: "Salir"
