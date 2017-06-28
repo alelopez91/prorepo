@@ -30,5 +30,12 @@
   <%= enum_l(@project, :revision_state) %>
 </p>
 
+<p>
+  <% if @project.attachment? %>
+    <strong><%= t('activerecord.attributes.project.attachment') %>:</strong><br>
+    <iframe src=<%= @project.attachment.url %> width="1000" height="780" style="padding-left: 100px;"> </iframe>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', root_path %>
