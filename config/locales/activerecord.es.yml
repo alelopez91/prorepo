@@ -63,6 +63,7 @@ es:
         revision_states:
           pending: Pendiente
           approved: Aprobado
+        reason: Observaciones
       specialty:
         name: Nombre
         created_at: Fecha Creación

@@ -9,6 +9,8 @@ class Project < ApplicationRecord
   validates_attachment_file_name :attachment, :matches => [/pdf\Z/]
   validates :title, :abstract, :subject, :attachment, presence: true
   validates :authors, length: { minimum: 1}
+  validates :revision_state, presence: {message: I18n.t('errors.messages.input_revision_state') }, if: "reason.present?"
+  validates :reason, presence: {message: I18n.t('errors.messages.input_reason') }, if: "revision_state == \"pending\""
 
   scope :pending,  -> { where(revision_state: :pending) }
   scope :approved, -> { where(revision_state: :approved) }

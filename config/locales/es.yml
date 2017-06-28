@@ -15,3 +15,5 @@ es:
   errors:
     messages:
       blank: "No puede estar en blanco"
+      input_revision_state: "Debe ingresar un estado de revisión"
+      input_reason: "Debe ingresar un motivo"

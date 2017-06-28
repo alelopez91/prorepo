@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170530191505) do
+ActiveRecord::Schema.define(version: 20170628054708) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,12 +53,13 @@ ActiveRecord::Schema.define(version: 20170530191505) do
     t.string   "date"
     t.integer  "subject_id"
     t.integer  "revision_state",          default: 0
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                                    null: false
+    t.datetime "updated_at",                                    null: false
     t.string   "attachment_file_name"
     t.string   "attachment_content_type"
     t.integer  "attachment_file_size"
     t.datetime "attachment_updated_at"
+    t.text     "reason",                  default: "Pendiente"
     t.index ["subject_id"], name: "index_projects_on_subject_id", using: :btree
   end
 

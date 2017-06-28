@@ -1,5 +1,5 @@
 ActiveAdmin.register Project do
-  permit_params :title, :abstract, :authors, :date, :subject_id, :revision_state, :attachment
+  permit_params :title, :abstract, :authors, :date, :subject_id, :revision_state, :attachment, :reason
 
   scope I18n.t('all'), :all, default: true
   scope I18n.t('activerecord.attributes.project.revision_states.pending'),  :pending
@@ -23,6 +23,7 @@ ActiveAdmin.register Project do
   form  do |f|
     f.inputs do
       f.input :revision_state, as: :select, collection: enum_options_for_select(Project, :revision_state), include_blank: false
+      f.input :reason
       f.input :subject
       f.input :title
       f.input :abstract
@@ -46,6 +47,7 @@ ActiveAdmin.register Project do
           row :revision_state do
             enum_l(project, :revision_state)
           end
+          row :reason
           row :created_at
           row :updated_at
         end
