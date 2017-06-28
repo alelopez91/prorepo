@@ -7,6 +7,7 @@ es:
   back: "Atrás"
   show: "Ver"
   edit: "Modificar"
+  all: "Todos"
   destroy: "Eliminar"
   details: "Detalles"
   exit: "Salir"

@@ -49,6 +49,7 @@ es:
         updated_at: Fecha Modificación
       project:
         title: Título
+        title_contains: El Título Contiene
         abstract: Descripción
         authors: Autores
         date: Fecha de Realización

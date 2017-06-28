@@ -10,6 +10,9 @@ class Project < ApplicationRecord
   validates :title, :abstract, :subject, :attachment, presence: true
   validates :authors, length: { minimum: 1}
 
+  scope :pending,  -> { where(revision_state: :pending) }
+  scope :approved, -> { where(revision_state: :approved) }
+
   def specialty
     subject.specialty
   end
