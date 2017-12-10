@@ -5,6 +5,9 @@ ActiveAdmin.register Specialty do
     selectable_column
     id_column
     column :name
+    column "Cantidad de materias" do |specialty|
+      specialty.subjects.count
+    end
     column :grade_level do |specialty|
       enum_l(specialty, :grade_level)
     end
