@@ -1,19 +1,19 @@
 <div class="col-lg-12" style="min-height: 202px;">
+  <div class="col-lg-12">
+    <h1>
+      <%= link_to new_project_path, class: "btn btn-primary btn-sm pull-right", role: "button" do %>
+        <span class="pull-right">
+          ENVIANOS TU PROYECTO
+          <i class="fa fa-cloud-upload"></i>
+        </span>
+      <% end %>
+    </h1>
+  </div>
   <% if @projects.any? %>
     <div class="row">
       <div class="col-lg-12">
         <div class="col-lg-6">
           <h1><%= I18n.t('activerecord.models.project.other') %></h1>
-        </div>
-        <div class="col-lg-6">
-          <h1>
-            <%= link_to new_project_path, class: "btn btn-primary btn-sm pull-right", role: "button" do %>
-              <span class="pull-right">
-                ENVIANOS TU PROYECTO
-                <i class="fa fa-cloud-upload"></i>
-              </span>
-            <% end %>
-          </h1>
         </div>
       </div>
   <!-- /.col-lg-12 -->
