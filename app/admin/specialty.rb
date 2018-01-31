@@ -8,7 +8,7 @@ ActiveAdmin.register Specialty do
     column "Cantidad de materias" do |specialty|
       specialty.subjects.count
     end
-    column :grade_level do |specialty|
+    tag_column :grade_level do |specialty|
       enum_l(specialty, :grade_level)
     end
     actions
@@ -27,7 +27,7 @@ ActiveAdmin.register Specialty do
       tab I18n.t "details" do
         attributes_table do
           row :name
-          row :grade_level do
+          tag_row :grade_level do
             enum_l(specialty, :grade_level)
           end
           row :created_at

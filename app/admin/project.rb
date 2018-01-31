@@ -14,7 +14,7 @@ ActiveAdmin.register Project do
     id_column
     column :title
     column :subject
-    column :revision_state do |state|
+    tag_column :revision_state do |state|
       enum_l(state, :revision_state)
     end
     actions
@@ -44,7 +44,7 @@ ActiveAdmin.register Project do
           row :date
           row :subject
           row :specialty
-          row :revision_state do
+          tag_row :revision_state do
             enum_l(project, :revision_state)
           end
           row :reason
