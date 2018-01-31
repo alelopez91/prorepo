@@ -1,5 +1,5 @@
 es:
-  title: "Repositorio de Proyecto - HabPro"
+  title: "Repositorio de Proyectos - HabPro"
   signup: "Registrarse"
   login: "Ingresar"
   logout: "Cerrar Sesión"
@@ -7,14 +7,13 @@ es:
   back: "Atrás"
   show: "Ver"
   edit: "Modificar"
+  all: "Todos"
+  reset_button: "Limpiar Campos"
   destroy: "Eliminar"
+  details: "Detalles"
   exit: "Salir"
-  models:
-    specialty:
-      grade_level_options:
-        grade: Grado
-        postgraduate: Posgrado
-        technicature: Tecnicatura
   errors:
     messages:
       blank: "No puede estar en blanco"
+      input_revision_state: "Debe ingresar un estado de revisión"
+      input_reason: "Debe ingresar un motivo"

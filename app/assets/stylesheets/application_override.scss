@@ -1,0 +1,60 @@
+@font-face {
+    font-family:'FontAwesome';
+    src:url('fontawesome-webfont.eot?v=4.0.3');
+    src:url('fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'),url('fontawesome-webfont.woff?v=4.0.3') format('woff'),url('fontawesome-webfont.ttf?v=4.0.3') format('truetype'),url('fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+    font-weight:normal;
+    font-style:normal
+}
+
+#btn_reset {
+	margin-bottom: 10px;
+}
+
+div.panel-primary a:link, a:visited, a:hover, a:active {
+  text-decoration:none;
+}
+
+.link {
+  text-decoration:none;
+}
+
+#panel_index {
+	height: 200px;
+}
+
+#panel_body_index {
+	height: 59%;
+}
+
+#row_project {
+	padding-top: 10px;
+}
+
+#panel_heading_project {
+	background: #D9534F;
+}
+
+#panel_heading_perspective {
+	background: #5CB85C;
+}
+
+#panel_heading_objective {
+	background: #5BC0DE;
+}
+
+#panel_heading_indicator {
+	background: #F0AD4E;
+}
+
+#btn_more {
+  float: right;
+}
+
+#dropdown_menu {
+	margin-left: -140px;	
+}
+
+footer {
+	font-size: 10px;
+	float: right;
+}

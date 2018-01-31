@@ -13,6 +13,9 @@ es:
       specialty:
         one: Carrera
         other: Carreras
+      subject:
+        one: Materia
+        other: Materias
     attributes:
       user:
         email: Correo Electrónico
@@ -45,15 +48,45 @@ es:
         last_sign_in_ip: Ultimo Acceso
         updated_at: Fecha Modificación
       project:
-        name: Título
-        description: Descripción
+        title: Título
+        title_contains: El Título Contiene
+        abstract: Descripción
+        authors: Autores
+        date: Fecha de Realización
+        subject: Materia
+        subject_id: Materia
+        specialty: Carrera
+        attachment: Archivo PDF
         created_at: Fecha Creación
         updated_at: Fecha Modificación
+        revision_state: Estado de Revisión
+        revision_states:
+          pending: Pendiente
+          approved: Aprobado
+        reason: Observaciones
       specialty:
         name: Nombre
         created_at: Fecha Creación
         updated_at: Fecha Modificación
-        grade_level: Tipo de Carrera
+        grade_level: Tipo
+        grade_levels:
+          grade: Grado
+          postgrade: Posgrado
+          technicature: Tecnicatura
+          event: Evento
+      subject:
+        name: Nombre
+        created_at: Fecha Creación
+        updated_at: Fecha Modificación
+        specialty: Carrera
+        department: Departamento
+        departments:
+          systems: Sistemas
+          electronics: Electrónica
+          electric: Eléctrica
+          civil: Civil
+          mechanics: Mecánica
+          basic_sciences: Ciencias Básicas
     errors:
       models:
         user:
@@ -72,11 +105,25 @@ es:
               confirmation: No coincide con la contraseña
         project:
           attributes:
-            name:
-              blank: No puede estar en blanco
+            title:
+              blank: Debe ingresar un título
+            abstract:
+              blank: Debe ingresar una descripción
+            subject:
+              blank: Debe ingregar una materia o evento
+            authors:
+              too_short: Debe ingresar al menos un autor
+            attachment:
+              blank: Debe cargar un archivo PDF
         specialty:
           attributes:
             name:
               blank: Debe ingresar un nombre
             grade_level:
               blank: Debe seleccionar un tipo de carrera
+        subject:
+          attributes:
+            name:
+              blank: Debe ingresar un nombre
+            specialty:
+              blank: Debe seleccionar una carrera

@@ -1,0 +1,57 @@
+<div class="col-lg-12">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3><%= @project.title %></h3>
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+      <!-- Nav tabs -->
+      <ul class="nav nav-pills">
+        <li class="active"><a href="#home-pills" data-toggle="tab">Información</a>
+        </li>
+        <li><a href="#profile-pills" data-toggle="tab">PDF Adjunto</a>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane fade in active" id="home-pills">
+          <div class="col-lg-12">
+            <br>
+            <p>
+              <strong><%= t('activerecord.attributes.project.date') %>:</strong>
+              <%= @project.date %>
+            </p>
+
+            <p>
+              <strong><%= t('activerecord.attributes.project.subject') %>:</strong>
+              <%= @project.subject.name %>
+            </p>
+
+            <p>
+              <strong><%= t('activerecord.attributes.project.authors') %>:</strong>
+              <%= @project.authors %>
+            </p>
+
+            <p>
+              <strong><%= t('activerecord.attributes.project.abstract') %>:</strong>
+              <%= @project.abstract %>
+            </p>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="profile-pills">
+          <% if @project.attachment? %>
+            <br>
+            <p>
+              <div class="col-lg-12">
+                <iframe src=<%= @project.attachment.url %> width="100%" height="780"></iframe>
+              </div>
+            </p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+      <!-- /.panel-body -->
+    </div>
+    <!-- /.panel -->
+</div>
