@@ -52,6 +52,7 @@ es:
         title_contains: El Título Contiene
         abstract: Descripción
         authors: Autores
+        email: Email de Contacto
         date: Fecha de Realización
         subject: Materia
         subject_id: Materia
@@ -115,6 +116,8 @@ es:
               too_short: Debe ingresar al menos un autor
             attachment:
               blank: Debe cargar un archivo PDF
+            email:
+              blank: Debe ingregar un email de contacto
         specialty:
           attributes:
             name:

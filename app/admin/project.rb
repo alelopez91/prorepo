@@ -1,5 +1,6 @@
 ActiveAdmin.register Project do
-  permit_params :title, :abstract, :authors, :date, :subject_id, :revision_state, :attachment, :reason
+  permit_params :title, :abstract, :authors, :date, :subject_id, :revision_state, :attachment,
+                :reason, :email
 
   scope I18n.t('all'), :all, default: true
   scope I18n.t('activerecord.attributes.project.revision_states.pending'),  :pending
@@ -28,6 +29,7 @@ ActiveAdmin.register Project do
       f.input :title
       f.input :abstract
       f.input :authors
+      f.input :email
       f.input :date, as: :datepicker, :html_option => { value: Date.today }
       f.input :attachment, hint: f.project.attachment? ? link_to(f.project.attachment_file_name, f.project.attachment.url) : content_tag(:span, "No hay PDF subido")
     end
@@ -41,6 +43,7 @@ ActiveAdmin.register Project do
           row :title
           row :abstract
           row :authors
+          row :email
           row :date
           row :subject
           row :specialty
