@@ -20,6 +20,8 @@ gem 'route_translator'
 gem 'devise'
 gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+gem 'sunspot_rails'
+gem 'sunspot_solr'
 
 
 group :development, :test do

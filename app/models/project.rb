@@ -15,7 +15,12 @@ class Project < ApplicationRecord
   scope :pending,  -> { where(revision_state: :pending) }
   scope :approved, -> { where(revision_state: :approved) }
 
+  searchable do
+    text :title, :abstract, :authors
+  end
+
   def specialty
     subject.specialty
   end
+
 end

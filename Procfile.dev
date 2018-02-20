@@ -1,0 +1,4 @@
+db: postgres -D /usr/local/var/postgres
+web: bundle exec puma -C config/puma.rb
+smtp: mailcatcher --foreground
+search: bundle exec rake sunspot:solr:run

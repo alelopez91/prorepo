@@ -24,4 +24,7 @@
 # Ignore public files.
 /public
 
+# Ignore solr files.
+/solr
+
 .env
